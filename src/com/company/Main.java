@@ -1,8 +1,5 @@
 package com.company;
-<<<<<<< HEAD
 import java.lang.reflect.Array;
-=======
->>>>>>> 6d4bed3c9bad54478722a029dd92d1057629a94a
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -10,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-<<<<<<< HEAD
+
         ArrayList<Book> books = new ArrayList<Book>();
         ArrayList<Author> authors = new ArrayList<Author>();
 
@@ -26,7 +23,6 @@ public class Main {
             Author au= new Author();
             if (responseBook.equalsIgnoreCase("y")) {
 
-=======
         ArrayList<Book> books = new ArrayList<>();
 
 
@@ -42,13 +38,11 @@ public class Main {
             if (response.equalsIgnoreCase("y")) {
 
                 Book b = new Book();
->>>>>>> 6d4bed3c9bad54478722a029dd92d1057629a94a
                 System.out.print("Enter the title: ");
                 b.setTitle(scan.nextLine());
                 System.out.print("Enter the ISBN: ");
                 b.setIsbn(scan.nextLine());
 
-<<<<<<< HEAD
                 do {
                     System.out.println("Do you want to enter an author's information? ");
                     responseAuthor = scan.nextLine();
@@ -81,11 +75,6 @@ public class Main {
 
         }while (responseBook.equalsIgnoreCase("y"));
 
-
-
-
-
-
         System.out.println("books.size(): " + books.size());
         for (Book bk : books) {
             System.out.println(bk.getTitle());
@@ -105,9 +94,6 @@ public class Main {
 
 }
 
-
-
-=======
 
                 Author p = new Author();
                 System.out.print("Enter the Authors First Name: ");
@@ -132,12 +118,11 @@ public class Main {
         } while (response.equalsIgnoreCase("y"));
 
         for (Book bk : books) {
-//            if () {
+            if () {
                 System.out.print(bk.getTitle());
                 System.out.print(" ");
                 System.out.print((bk.getAuthor()));
             }
         }
     }
-//}
->>>>>>> 6d4bed3c9bad54478722a029dd92d1057629a94a
+}
