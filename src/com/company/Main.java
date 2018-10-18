@@ -26,17 +26,32 @@ public class Main {
                 b.setTitle(scan.nextLine());
                 System.out.print("Enter the ISBN: ");
                 b.setIsbn(scan.nextLine());
-                System.out.print("Enter author first name: ");
-                au.setfName(scan.nextLine());
-                System.out.print("Enter author last name: ");
-                au.setlName(scan.nextLine());
 
-               b.setAuthor(au);
+                do {
+                    System.out.println("Do you want to enter an author's information? ");
+                    responseAuthor = scan.nextLine();
+                    Author p = new Author();
+
+                    if (responseAuthor.equalsIgnoreCase("y")) {
+
+                        System.out.print("Enter the Authors First Name: ");
+                        p.setfName(scan.nextLine());
+                        System.out.print("Enter the Authors Last Name: ");
+                        p.setlName(scan.nextLine());
+                        System.out.print("Enter the authors Email Address: ");
+                        p.seteAddress(scan.nextLine());
+                        System.out.print("Enter the Authors Phone number: ");
+                        p.setPhoneNumber(scan.nextLine());
+
+                        b.getAuthors().add(p);
+                       // authors.add(p);
+                    }
+
+                } while (responseAuthor.equalsIgnoreCase("y"));
+
+                //b.setAuthors(authors);
                 books.add(b);
 
-             //   System.out.println(b.getTitle());
-                //System.out.println(b.getIsbn());
-                //System.out.println(b.getAuthor());
 
             }
 
@@ -45,27 +60,6 @@ public class Main {
         }while (responseBook.equalsIgnoreCase("y"));
 
 
-            do {
-                System.out.println("Do you want to enter an author's information? ");
-                responseAuthor = scan.nextLine();
-                Author p = new Author();
-
-                if (responseAuthor.equalsIgnoreCase("y")) {
-
-                    System.out.print("Enter the Authors First Name: ");
-                    p.setfName(scan.nextLine());
-                    System.out.print("Enter the Authors Last Name: ");
-                    p.setlName(scan.nextLine());
-                    System.out.print("Enter the authors Email Address: ");
-                    p.seteAddress(scan.nextLine());
-                    System.out.print("Enter the Authors Phone number: ");
-                    p.setPhoneNumber(scan.nextLine());
-
-
-                    authors.add(p);
-                }
-
-            } while (responseAuthor.equalsIgnoreCase("y"));
 
 
 
@@ -76,17 +70,14 @@ public class Main {
             System.out.print("");
             System.out.println(bk.getIsbn());
             System.out.print("");
-            System.out.println(bk.getAuthor().getfName());
-            System.out.print("");
-            System.out.println(bk.getAuthor().getlName());
-            System.out.print("");
+            System.out.println("Authors: " + bk.getAuthors().size());
+
+            for(Author auther: bk.getAuthors()) {
+                System.out.println((auther.toString()));
+            }
+
         }
 
-        //System.out.println("Authors: " + authors.size());
-
-        for(Author auther: authors) {
-            System.out.print((auther.toString()));
-        }
 
     }
 

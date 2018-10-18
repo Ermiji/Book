@@ -6,23 +6,25 @@ public class Book extends Author {
 
     private String title;
     private String isbn;
-    private Author author;
+    private ArrayList<Author> authors;
 
     public Book(){
-
+        authors= new ArrayList<>();
     }
 
-    public Book(String title, String isbn, Author author){
+    public Book(String title, String isbn, ArrayList<Author> authors){
         this.title = title;
         this.isbn = isbn;
-        this.author= author;
+        this.authors= authors;
     }
 
     public String getTitle() {
+
         return title;
     }
 
     public void setTitle(String title) {
+
         this.title = title;
     }
 
@@ -31,14 +33,15 @@ public class Book extends Author {
     }
 
     public void setIsbn(String isbn) {
+
         this.isbn = isbn;
     }
 
-    public Author getAuthor() {
-        return author;
+    public ArrayList<Author> getAuthors() {
+        return authors;
     }
 
-    public void setAuthor(Author author) {
-        this.author = author;
+    public void setAuthors(ArrayList<Author> authors) {
+        this.authors = authors;
     }
 }
