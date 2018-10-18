@@ -49,10 +49,14 @@ public class Author {
         this.phoneNumber = phoneNumber;
     }
 
+<<<<<<< HEAD
     public String toString(){
         return "First Name: " +         fName + "\n" +
                 "Last Name: " +          lName + "\n" +
                 "Email address: " +      eAddress + "\n" +
                 "Phone number: " +       phoneNumber + "\n";
     }
+=======
+    //make string method and call it on main class
+>>>>>>> 6d4bed3c9bad54478722a029dd92d1057629a94a
 }
